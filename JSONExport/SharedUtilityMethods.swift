@@ -147,7 +147,14 @@ func unionDictionaryFromArrayElements(_ array: NSArray) -> NSDictionary
         if let dic = item as? NSDictionary{
             //loop all over its keys
             for key in dic.allKeys as! [String]{
-                dictionary[key] = dic[key]
+                //error : all keys = dictionary + dic
+                if let old = dictionary[key] as? NSArray,
+                    let new = dic[key] as? [Any] {
+                    dictionary[key] = old.addingObjects(from: new)
+                } else {
+                    dictionary[key] = dic[key]
+                }
+//                dictionary[key] = dic[key]
             }
         }
     }

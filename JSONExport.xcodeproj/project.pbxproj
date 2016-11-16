@@ -16,6 +16,8 @@
 		000552781D700D0100E48A0B /* SBJson4StreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0005526E1D700D0100E48A0B /* SBJson4StreamWriterState.m */; };
 		000552791D700D0100E48A0B /* SBJson4Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 000552701D700D0100E48A0B /* SBJson4Writer.m */; };
 		166AF5CE1CEF6C3600516EDD /* Swift-Struct-Gloss.json in Resources */ = {isa = PBXBuildFile; fileRef = 166AF5CD1CEF6C3600516EDD /* Swift-Struct-Gloss.json */; };
+		324EBBBC1DCC718700D384EC /* Swift3-Mappable.json in Resources */ = {isa = PBXBuildFile; fileRef = 324EBBBA1DCC718700D384EC /* Swift3-Mappable.json */; };
+		324EBBBE1DCC738100D384EC /* Swift-Mappable-No-Coding.json in Resources */ = {isa = PBXBuildFile; fileRef = 324EBBBD1DCC738100D384EC /* Swift-Mappable-No-Coding.json */; };
 		608896441CF278440074CB80 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608896431CF278440074CB80 /* Author.swift */; };
 		60FB8FF01B9B361600290979 /* Java-Android Realm.json in Resources */ = {isa = PBXBuildFile; fileRef = 60FB8FE61B9B361600290979 /* Java-Android Realm.json */; };
 		60FB8FF11B9B361600290979 /* Java-Android.json in Resources */ = {isa = PBXBuildFile; fileRef = 60FB8FE71B9B361600290979 /* Java-Android.json */; };
@@ -71,6 +73,8 @@
 		0005526F1D700D0100E48A0B /* SBJson4Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Writer.h; sourceTree = "<group>"; };
 		000552701D700D0100E48A0B /* SBJson4Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Writer.m; sourceTree = "<group>"; };
 		166AF5CD1CEF6C3600516EDD /* Swift-Struct-Gloss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Swift-Struct-Gloss.json"; path = "Supported Languages/Swift-Struct-Gloss.json"; sourceTree = "<group>"; };
+		324EBBBA1DCC718700D384EC /* Swift3-Mappable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Swift3-Mappable.json"; path = "Supported Languages/Swift3-Mappable.json"; sourceTree = "<group>"; };
+		324EBBBD1DCC738100D384EC /* Swift-Mappable-No-Coding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Swift-Mappable-No-Coding.json"; path = "Supported Languages/Swift-Mappable-No-Coding.json"; sourceTree = "<group>"; };
 		608896431CF278440074CB80 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		60FB8FE61B9B361600290979 /* Java-Android Realm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Java-Android Realm.json"; path = "Supported Languages/Java-Android Realm.json"; sourceTree = "<group>"; };
 		60FB8FE71B9B361600290979 /* Java-Android.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Java-Android.json"; path = "Supported Languages/Java-Android.json"; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 				60FB8FEB1B9B361600290979 /* Swift-Class.json */,
 				60FB8FEC1B9B361600290979 /* Swift-CoreData.json */,
 				60FB8FED1B9B361600290979 /* Swift-Mappable.json */,
+				324EBBBD1DCC738100D384EC /* Swift-Mappable-No-Coding.json */,
+				324EBBBA1DCC718700D384EC /* Swift3-Mappable.json */,
 				60FB8FEE1B9B361600290979 /* Swift-Struct.json */,
 				98978FC01D5B6B19000C1846 /* Swift-Struct-Unbox.json */,
 				60FB8FEF1B9B361600290979 /* SwiftyJSON-Class.json */,
@@ -365,11 +371,13 @@
 				60FB8FFC1B9B3F6400290979 /* ObjectiveC-Realm.json in Resources */,
 				60FB8FF11B9B361600290979 /* Java-Android.json in Resources */,
 				000552711D700D0100E48A0B /* LICENSE in Resources */,
+				324EBBBC1DCC718700D384EC /* Swift3-Mappable.json in Resources */,
 				60FB8FF81B9B361600290979 /* Swift-Struct.json in Resources */,
 				E2FA87BF1A059AC100648EB6 /* Images.xcassets in Resources */,
 				98978FC11D5B6B19000C1846 /* Swift-Struct-Unbox.json in Resources */,
 				60FB8FFD1B9B3F6400290979 /* Swift-Realm.json in Resources */,
 				60FB8FF71B9B361600290979 /* Swift-Mappable.json in Resources */,
+				324EBBBE1DCC738100D384EC /* Swift-Mappable-No-Coding.json in Resources */,
 				60FB8FF61B9B361600290979 /* Swift-CoreData.json in Resources */,
 				60FB8FF91B9B361600290979 /* SwiftyJSON-Class.json in Resources */,
 				60FB8FF21B9B361600290979 /* ObjectiveC-CoreData-iOS.json in Resources */,

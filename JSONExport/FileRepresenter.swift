@@ -169,6 +169,7 @@ class FileRepresenter{
     */
     func appendCopyrights()
     {
+        return
         fileContent += "//\n//\t\(className).\(lang.fileExtension)\n"
         if let me = ABAddressBook.shared()?.me(){
             
