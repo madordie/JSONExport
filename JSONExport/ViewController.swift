@@ -400,6 +400,9 @@ class ViewController: NSViewController, NSUserNotificationCenterDelegate, NSTabl
         //Do the lengthy process in background, it takes time with more complicated JSONs
         runOnBackground {
             str = jsonStringByRemovingUnwantedCharacters(str)
+            runOnUiThread({ () -> Void in
+                self.sourceText.string = str
+            })
             if let data = str.data(using: String.Encoding.utf8){
                 var error : NSError?
                 do {

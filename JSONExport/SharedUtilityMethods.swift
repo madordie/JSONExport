@@ -174,7 +174,20 @@ func jsonStringByRemovingUnwantedCharacters(_ jsonString: String) -> String
     var str = jsonString;
     str = str.replacingOccurrences(of: "“", with: "\"")
     str = str.replacingOccurrences(of: "”", with: "\"")
-    return stringByRemovingControlCharacters(str)
+    str = str.replacingOccurrences(of: "”", with: "\"")
+    str = str.replacingOccurrences(of: " ", with: "")
+    str = str.replacingOccurrences(of: " ", with: "")
+    if let regex = try? NSRegularExpression(pattern: "//[^\"]+$", options: [.useUnixLineSeparators]) {
+        str = str.components(separatedBy: "\n").map({ (line) -> String in
+            guard line.characters.count > 2 else { return line }
+            return regex.stringByReplacingMatches(in: line,
+                                                  options: [],
+                                                  range: NSRange.init(location: 0, length: line.characters.count),
+                                                  withTemplate: "")
+        }).joined(separator: "\n")
+    }
+    str = stringByRemovingControlCharacters(str)
+    return str
 }
 
 /**
