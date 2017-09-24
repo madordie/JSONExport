@@ -180,8 +180,9 @@ class FileRepresenter{
     {
         fileContent += "//\n//\t\(className).\(lang.fileExtension)\n"
         fileContent += "//\n//\tCreate by \(NSUserName())"
-        fileContent += " on \(getTodayFormattedDay())\n//\tCopyright © \(getYear())//\n"
-        fileContent += "\n"
+        fileContent += " on \(getTodayFormattedDay())\n//\tCopyright © \(getYear()) "
+        fileContent += ". All rights reserved.\n"
+        fileContent += "//\n\n"
         return
         if let me = ABAddressBook.shared()?.me(){
             
