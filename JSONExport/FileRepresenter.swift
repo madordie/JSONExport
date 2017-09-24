@@ -87,11 +87,20 @@ class FileRepresenter{
         self.properties = properties
         self.lang = lang
     }
-    
+
+    convenience init(fileContent: String, lang: LangModel)
+    {
+        self.init(className: "", properties: [], lang: lang)
+        self.fileContent = fileContent
+    }
+
     /**
     Generates the file content and stores it in the fileContent property
     */
     func toString() -> String{
+        if fileContent.characters.count > 0 {
+            return fileContent
+        }
         fileContent = ""
         appendFirstLineStatement()
         appendCopyrights()
@@ -169,8 +178,11 @@ class FileRepresenter{
     */
     func appendCopyrights()
     {
-        return
         fileContent += "//\n//\t\(className).\(lang.fileExtension)\n"
+        fileContent += "//\n//\tCreate by \(NSUserName())"
+        fileContent += " on \(getTodayFormattedDay())\n//\tCopyright © \(getYear())//\n"
+        fileContent += "\n"
+        return
         if let me = ABAddressBook.shared()?.me(){
             
             if let firstName = me.value(forProperty: kABFirstNameProperty as String) as? String{

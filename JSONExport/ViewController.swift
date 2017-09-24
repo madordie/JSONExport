@@ -420,6 +420,11 @@ class ViewController: NSViewController, NSUserNotificationCenterDelegate, NSTabl
                     fileGenerator.addFileWithName(&rootClassName, jsonObject: json, files: &self.files)
                     fileGenerator.fixReferenceMismatches(inFiles: self.files)
                     self.files = Array(self.files.reversed())
+                    // merge files
+                    let contents = self.files.map { $0.toString() }
+                        .joined(separator: "\n")
+                    self.files = [FileRepresenter(fileContent: contents, lang: self.selectedLang)]
+
                     runOnUiThread{
                         self.sourceText.isEditable = true
                         self.showSuccessStatus("Valid JSON structure")
